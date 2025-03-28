@@ -48,7 +48,7 @@ type NotificationsListRequest struct {
 
 type NotificationsListResponse struct {
 	MeowHeader
-	Notifications []Debt
+	Notifications []Notification
 }
 
 type RefDataResponse struct {
@@ -66,6 +66,11 @@ type DebtsRequest struct {
 type DebtsResponse struct {
 	DebtsList []Debt
 	Stats     map[string]map[string]int64
+}
+
+type Notification struct {
+	Debt
+	NotificationID string `json:"notificationid"`
 }
 
 type Debt struct {
