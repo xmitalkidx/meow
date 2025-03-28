@@ -70,7 +70,8 @@ type DebtsResponse struct {
 
 type Notification struct {
 	Debt
-	NotificationID string `json:"notificationid"`
+	NotificationID   string `json:"notification_id"`
+	NotificationType string `json:"notification_type"`
 }
 
 type Debt struct {
