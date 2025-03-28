@@ -69,6 +69,7 @@ type DebtsResponse struct {
 }
 
 type Notification struct {
+	//так надо
 	Debt
 	NotificationID   string `json:"notification_id"`
 	NotificationType string `json:"notification_type"`
