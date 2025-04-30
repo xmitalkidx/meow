@@ -152,6 +152,12 @@ func ReadAndParse(r *http.Request) (Request, error) {
 			return nil, fmt.Errorf("failed to unmarshal base message: %w", err)
 		}
 		return data, nil
+	case "NotificationResponse":
+		var data NotificationResponse
+		if err := json.Unmarshal(body, &data); err != nil {
+			return nil, fmt.Errorf("failed to unmarshal base message: %w", err)
+		}
+		return data, nil
 
 	default:
 		return nil, fmt.Errorf("message of unknown type")
