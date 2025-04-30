@@ -102,6 +102,13 @@ type CancelDebtRequest struct {
 	DebtID   string `json:"debtid"`
 }
 
+type NotificationResponse struct {
+	MeowHeader
+	NotificationID   string `json:"notificationid"`
+	NotificationType string `json:"notificationtype"`
+	Status           string `json:"status"`
+}
+
 func ReadAndParse(r *http.Request) (Request, error) {
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
