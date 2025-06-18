@@ -70,7 +70,7 @@ type DebtsResponse struct {
 
 type Notification struct {
 	//так надо
-	Debt
+	Debt             `bson:",inline"`
 	NotificationID   string `json:"notification_id"`
 	NotificationType string `json:"notification_type"`
 }
